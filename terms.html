@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms Of Use · Crovana Form House — Independent Journal of Interior Design & Architecture</title>
+  <meta name="description" content="Terms of use for Crovana Form House: your rights and responsibilities when reading, sharing, or contributing to our independent journal of interior design and architecture.">
+  <link rel="canonical" href="https://crovanaformhouse.com/terms.html">
+  <meta property="og:title" content="Terms of Use — Crovana Form House">
+  <meta property="og:description" content="Terms governing the use of Crovana Form House, an independent architecture and design journal.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Use",
+    "description": "Terms of use for Crovana Form House, independent journal of interior design and architecture.",
+    "url": "https://crovanaformhouse.com/terms.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Crovana Form House"
+    }
+  }
+  </script>
+
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink: #1a1816;
+      --ink-soft: #4a4540;
+      --ink-faint: #8a837a;
+      --paper: #faf8f5;
+      --paper-warm: #f4f0ea;
+      --rule: #ddd6cc;
+      --accent: #7a5c3e;
+      --accent-deep: #5c3f28;
+      --serif: "Georgia", "Times New Roman", "Iowan Old Style", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      --measure: 68ch;
+      --radius: 2px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--serif);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    a { color: var(--accent-deep); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+    a:hover { border-bottom-color: var(--accent); }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.6rem; letter-spacing: -0.03em; }
+    h2 { font-size: 1.85rem; margin-bottom: .6rem; }
+    h3 { font-size: 1.35rem; margin-bottom: .4rem; }
+    h4 { font-size: 1.05rem; font-family: var(--sans); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+
+    p { margin-bottom: 1.2rem; color: var(--ink-soft); }
+    p.lead { font-size: 1.15rem; color: var(--ink); line-height: 1.65; }
+
+    .kicker {
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: .5rem;
+    }
+
+    .meta {
+      font-family: var(--sans);
+      font-size: .78rem;
+      color: var(--ink-faint);
+      letter-spacing: .02em;
+    }
+
+    /* ========== LAYOUT ========== */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      border-bottom: 1px solid var(--rule);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      border: none;
+    }
+    .logo:hover { border: none; }
+    .logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-family: var(--sans);
+      font-size: .82rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .nav-links a { color: var(--ink-soft); border: none; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a.active { color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+
+    .search-toggle {
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 8px 14px;
+      font-family: var(--sans);
+      font-size: .78rem;
+      color: var(--ink-soft);
+      cursor: pointer;
+      letter-spacing: .04em;
+    }
+    .search-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ========== SEARCH BAR ========== */
+    .search-bar {
+      display: none;
+      padding: 16px 0 20px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .search-bar.open { display: block; }
+    .search-bar input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      background: var(--paper-warm);
+      color: var(--ink);
+      outline: none;
+    }
+    .search-bar input:focus { border-color: var(--accent); }
+    .search-bar input::placeholder { color: var(--ink-faint); }
+
+    /* ========== PAGE MASTHEAD ========== */
+    .page-masthead {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--rule);
+      text-align: center;
+    }
+    .page-masthead h1 { font-size: 2.8rem; letter-spacing: -0.035em; margin-bottom: .5rem; }
+    .page-masthead .subtitle {
+      font-family: var(--sans);
+      font-size: .82rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    /* ========== TERMS CONTENT ========== */
+    .terms-section {
+      padding: 64px 0 40px;
+    }
+
+    .terms-intro {
+      background: var(--paper-warm);
+      padding: 36px 40px;
+      border-radius: var(--radius);
+      margin-bottom: 56px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .terms-intro p {
+      margin-bottom: 0;
+      font-size: 1.02rem;
+      color: var(--ink);
+    }
+
+    .terms-block {
+      margin-bottom: 48px;
+    }
+
+    .terms-block h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: .4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .terms-block h3 {
+      font-size: 1.15rem;
+      margin-top: 28px;
+      margin-bottom: .5rem;
+      font-family: var(--serif);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .terms-block p {
+      max-width: var(--measure);
+    }
+
+    .terms-block ul, .terms-block ol {
+      margin: 12px 0 20px 24px;
+      max-width: var(--measure);
+      color: var(--ink-soft);
+    }
+
+    .terms-block li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .terms-block li::marker {
+      color: var(--accent);
+    }
+
+    .note-box {
+      background: var(--paper-warm);
+      padding: 24px 28px;
+      border-radius: var(--radius);
+      margin: 28px 0;
+      border-left: 3px solid var(--accent);
+    }
+
+    .note-box p {
+      margin-bottom: 0;
+      font-size: .96rem;
+      color: var(--ink);
+    }
+
+    .last-updated {
+      font-family: var(--sans);
+      font-size: .78rem;
+      letter-spacing: .04em;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: .78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      margin-top: 16px;
+    }
+    .back-to-top:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      border-top: 1px solid var(--rule);
+      padding: 56px 0 40px;
+      font-family: var(--sans);
+      font-size: .85rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-grid h4 { font-size: .74rem; margin-bottom: 14px; color: var(--ink); }
+    .footer-grid ul { list-style: none; }
+    .footer-grid li { margin-bottom: 8px; }
+    .footer-grid a { color: var(--ink-faint); border: none; }
+    .footer-grid a:hover { color: var(--accent); }
+    .footer-brand p { font-size: .85rem; color: var(--ink-faint); line-height: 1.6; max-width: 300px; margin-top: 8px; }
+    .footer-bottom {
+      border-top: 1px solid var(--rule);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: .78rem;
+      color: var(--ink-faint);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .page-masthead h1 { font-size: 2rem; }
+      .nav-links { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .page-masthead { padding: 40px 0 28px; }
+      .terms-section { padding: 40px 0 24px; }
+      .terms-intro { padding: 24px 20px; }
+      .terms-block h2 { font-size: 1.4rem; }
+      .terms-block ul, .terms-block ol { margin-left: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Crovana <span>Form House</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html" class="active">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </ul>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <input type="text" id="searchInput" placeholder="Search articles, topics, materials…">
+    </div>
+  </div>
+</header>
+
+<!-- ========== PAGE MASTHEAD ========== -->
+<section class="page-masthead">
+  <div class="container">
+    <span class="kicker">Legal</span>
+    <h1>Terms Of Use</h1>
+    <p class="subtitle">Rules &amp; responsibilities for reading, sharing, and contributing</p>
+  </div>
+</section>
+
+<!-- ========== TERMS CONTENT ========== -->
+<div class="container-narrow terms-section">
+
+  <p class="last-updated">Last updated: 15 May 2025</p>
+
+  <div class="terms-intro">
+    <p>Crovana Form House is an independent editorial journal. By accessing or using this website, you agree to these Terms of Use. Please read them carefully — they explain what you can expect from us, and what we expect from you.</p>
+  </div>
+
+  <!-- 1. Acceptance -->
+  <div class="terms-block" id="acceptance">
+    <h2>1. Acceptance of Terms</h2>
+    <p>By visiting, browsing, or otherwise using crovanaformhouse.com (the “Site”), you acknowledge that you have read, understood, and agree to be bound by these Terms of Use, together with our <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookies Policy</a>. If you do not agree with any part of these terms, please discontinue use of the Site.</p>
+    <p>We may update these terms from time to time. The “Last updated” date at the top of this page indicates when changes were made. Your continued use of the Site after changes are posted constitutes acceptance of the revised terms.</p>
+  </div>
+
+  <!-- 2. Editorial content & purpose -->
+  <div class="terms-block" id="content">
+    <h2>2. Editorial Content</h2>
+    <p>All articles, guides, case studies, photographs, and other materials published on the Site are provided for general informational and educational purposes only. They reflect our editorial perspective on interior design, architecture, and related subjects.</p>
+
+    <h3>2.1 No professional advice</h3>
+    <p>Nothing on this Site constitutes professional architectural, engineering, legal, financial, or construction advice. You should not rely solely on our content when making decisions about a building project, renovation, or purchase. Always consult a qualified professional who can assess your specific circumstances.</p>
+
+    <h3>2.2 Accuracy and completeness</h3>
+    <p>We make reasonable efforts to ensure that the information we publish is accurate at the time of publication. However, design standards, building codes, material availability, and industry practices change. We make no warranty — express or implied — that any content is complete, current, or suitable for a particular purpose.</p>
+
+    <div class="note-box">
+      <p>We welcome corrections. If you believe an article contains a factual error, please contact us at <a href="mailto:editor@crovanaformhouse.com">editor@crovanaformhouse.com</a> and we will review it promptly.</p>
+    </div>
+  </div>
+
+  <!-- 3. Intellectual property -->
+  <div class="terms-block" id="ip">
+    <h2>3. Intellectual Property</h2>
+    <p>Unless otherwise stated, all content on the Site — including text, layout, graphics, logos, and the selection and arrangement of articles — is the property of Crovana Form House and is protected by copyright and other intellectual property laws.</p>
+
+    <h3>3.1 Permitted use</h3>
+    <p>You may read, share links to, and quote short excerpts of our articles for non-commercial purposes, provided you give clear attribution to Crovana Form House and link back to the original article. For example:</p>
+    <ul>
+      <li>Sharing a link on social media or in a newsletter.</li>
+      <li>Quoting a sentence or two in a blog post, review, or academic paper with proper credit.</li>
+      <li>Printing a single copy for personal, non-commercial reference.</li>
+    </ul>
+
+    <h3>3.2 Prohibited use</h3>
+    <p>You may not, without our prior written permission:</p>
+    <ul>
+      <li>Republish, reproduce, or redistribute substantial portions of our content.</li>
+      <li>Use our content for commercial purposes, including training AI models, content farms, or paid newsletters.</li>
+      <li>Modify, adapt, or create derivative works based on our articles or images.</li>
+      <li>Remove or obscure copyright notices, author credits, or attribution.</li>
+      <li>Frame or mirror any part of the Site without authorization.</li>
+    </ul>
+
+    <h3>3.3 Third-party images</h3>
+    <p>Some photographs on the Site are sourced from third-party providers and are used under licence. These images remain the property of their respective owners and may not be extracted or reused separately from the article in which they appear.</p>
+  </div>
+
+  <!-- 4. User conduct -->
+  <div class="terms-block" id="conduct">
+    <h2>4. User Conduct</h2>
+    <p>If you interact with the Site — for example, by submitting a comment, contacting us, or sending a story pitch — you agree not to:</p>
+    <ul>
+      <li>Post or transmit content that is unlawful, defamatory, harassing, or discriminatory.</li>
+      <li>Impersonate any person or misrepresent your affiliation with anyone.</li>
+      <li>Introduce viruses, malware, or any other harmful code.</li>
+      <li>Attempt to gain unauthorized access to the Site, its servers, or any related systems.</li>
+      <li>Use automated tools to scrape, harvest, or index our content without permission.</li>
+    </ul>
+    <p>We reserve the right to remove any user-submitted content that violates these terms, and to restrict access to the Site for anyone who does so.</p>
+  </div>
+
+  <!-- 5. Third-party links -->
+  <div class="terms-block" id="links">
+    <h2>5. Third-Party Links</h2>
+    <p>The Site may contain links to external websites, products, or resources. These links are provided for convenience and reference only. We do not control, endorse, or take responsibility for the content, privacy practices, or accuracy of any third-party site.</p>
+    <p>When you leave our Site via an external link, you do so at your own risk. We encourage you to review the terms and privacy policies of any site you visit.</p>
+  </div>
+
+  <!-- 6. Disclaimer of warranties -->
+  <div class="terms-block" id="warranties">
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>The Site and all content are provided on an “as is” and “as available” basis. To the fullest extent permitted by law, Crovana Form House disclaims all warranties, whether express or implied, including but not limited to:</p>
+    <ul>
+      <li>Implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</li>
+      <li>Warranties that the Site will be uninterrupted, error-free, or free of harmful components.</li>
+      <li>Warranties regarding the accuracy, reliability, or completeness of any content.</li>
+    </ul>
+    <p>Your use of the Site is at your sole discretion and risk.</p>
+  </div>
+
+  <!-- 7. Limitation of liability -->
+  <div class="terms-block" id="liability">
+    <h2>7. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, Crovana Form House, its editors, contributors, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Site or reliance on any content, even if we have been advised of the possibility of such damages.</p>
+    <p>In jurisdictions that do not allow the exclusion of certain warranties or liabilities, our liability shall be limited to the fullest extent permitted by law.</p>
+  </div>
+
+  <!-- 8. Indemnity -->
+  <div class="terms-block" id="indemnity">
+    <h2>8. Indemnity</h2>
+    <p>You agree to indemnify and hold harmless Crovana Form House, its editors, and contributors from any claims, losses, liabilities, damages, or expenses (including reasonable legal fees) arising from your violation of these Terms of Use or your misuse of the Site.</p>
+  </div>
+
+  <!-- 9. Privacy & cookies -->
+  <div class="terms-block" id="privacy">
+    <h2>9. Privacy &amp; Cookies</h2>
+    <p>Your use of the Site is also governed by our <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookies Policy</a>. These documents explain what personal data we collect, how we use it, and the choices you have. By using the Site, you consent to the practices described in those policies.</p>
+  </div>
+
+  <!-- 10. Termination -->
+  <div class="terms-block" id="termination">
+    <h2>10. Termination</h2>
+    <p>We reserve the right to suspend or terminate access to the Site, in whole or in part, at any time and without notice, for any reason — including if we believe you have violated these terms. Sections concerning intellectual property, disclaimers, limitation of liability, and indemnity shall survive termination.</p>
+  </div>
+
+  <!-- 11. Governing law -->
+  <div class="terms-block" id="law">
+    <h2>11. Governing Law</h2>
+    <p>These Terms of Use are governed by and construed in accordance with the laws of England and Wales, without regard to conflict of law principles. Any dispute arising from or relating to these terms or your use of the Site shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+  </div>
+
+  <!-- 12. Contact -->
+  <div class="terms-block" id="contact">
+    <h2>12. Contact</h2>
+    <p>If you have questions about these Terms of Use, please contact us:</p>
+    <p style="margin-bottom: 0;"><strong>Email:</strong> <a href="mailto:editor@crovanaformhouse.com">editor@crovanaformhouse.com</a></p>
+    <p style="margin-top: 8px;">We aim to respond to all queries within a reasonable time.</p>
+  </div>
+
+  <!-- back to top -->
+  <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule);">
+    <a href="#" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">↑ Back to top</a>
+  </div>
+
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Crovana Form House</h4>
+        <p>An independent journal of interior design and architecture. Written for readers who want to understand the principles behind good buildings and better rooms.</p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="index.html#interiors">Interiors</a></li>
+          <li><a href="index.html#architecture">Architecture</a></li>
+          <li><a href="index.html#materials">Materials</a></li>
+          <li><a href="index.html#guides">Guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Journal</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Crovana Form House. All rights reserved.</span>
+      <span>Editorial journal · No sponsored content</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  // ===== SEARCH TOGGLE =====
+  function toggleSearch() {
+    const bar = document.getElementById('searchBar');
+    bar.classList.toggle('open');
+    if (bar.classList.contains('open')) {
+      document.getElementById('searchInput').focus();
+    }
+  }
+
+  // ===== FAQ TOGGLE (not used on this page, but kept for consistency) =====
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    if (!item) return;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) {
+      item.classList.add('open');
+    }
+  }
+
+  // ===== SIMPLE SEARCH FILTER (placeholder for future use) =====
+  function filterArticles() {
+    // No article list on this page; placeholder for consistency
+  }
+</script>
+
+</body>
+</html>

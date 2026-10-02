@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crovana Form House — Independent Journal of Interior Design & Architecture</title>
+<meta name="description" content="A premium editorial publication covering residential architecture, modern interiors, space planning, materials, lighting, and the principles behind enduring homes. Essays, guides, and case studies for design-literate readers.">
+<link rel="canonical" href="https://crovanaformhouse.com/">
+<meta property="og:title" content="Crovana Form House — Interior Design & Architecture Journal">
+<meta property="og:description" content="Long-form essays and practical guides on residential architecture, interior design, and the material logic of modern homes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Crovana Form House",
+  "description": "Independent journal of interior design and architecture.",
+  "url": "https://crovanaformhouse.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Crovana Form House"
+  }
+}
+</script>
+
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink: #1a1816;
+  --ink-soft: #4a4540;
+  --ink-faint: #8a837a;
+  --paper: #faf8f5;
+  --paper-warm: #f4f0ea;
+  --rule: #ddd6cc;
+  --accent: #7a5c3e;
+  --accent-deep: #5c3f28;
+  --serif: "Georgia", "Times New Roman", "Iowan Old Style", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --measure: 68ch;
+  --radius: 2px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--serif);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent-deep); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+a:hover { border-bottom-color: var(--accent); }
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+h1 { font-size: 2.6rem; letter-spacing: -0.03em; }
+h2 { font-size: 1.85rem; margin-bottom: .6rem; }
+h3 { font-size: 1.35rem; margin-bottom: .4rem; }
+h4 { font-size: 1.05rem; font-family: var(--sans); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+
+p { margin-bottom: 1.2rem; color: var(--ink-soft); }
+p.lead { font-size: 1.15rem; color: var(--ink); line-height: 1.65; }
+
+.kicker {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.meta {
+  font-family: var(--sans);
+  font-size: .78rem;
+  color: var(--ink-faint);
+  letter-spacing: .02em;
+}
+
+/* ========== LAYOUT ========== */
+.container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+/* ========== HEADER ========== */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  border: none;
+}
+.logo:hover { border: none; }
+.logo span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  font-family: var(--sans);
+  font-size: .82rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.nav-links a { color: var(--ink-soft); border: none; }
+.nav-links a:hover { color: var(--accent); }
+
+.search-toggle {
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-family: var(--sans);
+  font-size: .78rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  letter-spacing: .04em;
+}
+.search-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ========== SEARCH BAR ========== */
+.search-bar {
+  display: none;
+  padding: 16px 0 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.search-bar.open { display: block; }
+.search-bar input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  background: var(--paper-warm);
+  color: var(--ink);
+  outline: none;
+}
+.search-bar input:focus { border-color: var(--accent); }
+.search-bar input::placeholder { color: var(--ink-faint); }
+
+/* ========== MASTHEAD ========== */
+.masthead {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+.masthead h1 { font-size: 3rem; letter-spacing: -0.04em; margin-bottom: .5rem; }
+.masthead .subtitle {
+  font-family: var(--sans);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* ========== MAIN LAYOUT ========== */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 56px;
+  padding: 48px 0 80px;
+  align-items: start;
+}
+
+/* ========== FEATURED ARTICLE ========== */
+.featured-article {
+  margin-bottom: 56px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--rule);
+}
+.featured-article img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  margin-bottom: 28px;
+  border-radius: var(--radius);
+}
+.featured-article h2 { font-size: 2.1rem; margin-bottom: .6rem; }
+.featured-article h2 a { color: var(--ink); border: none; }
+.featured-article h2 a:hover { color: var(--accent); }
+.featured-article .excerpt { font-size: 1.08rem; color: var(--ink-soft); margin-top: .8rem; }
+
+/* ========== ARTICLE CARDS ========== */
+.article-list { list-style: none; }
+
+.article-card {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 28px;
+  align-items: start;
+}
+.article-card:first-child { padding-top: 0; }
+.article-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  order: 2;
+}
+.article-card .card-body { order: 1; }
+.article-card h3 { font-size: 1.3rem; margin-bottom: .35rem; }
+.article-card h3 a { color: var(--ink); border: none; }
+.article-card h3 a:hover { color: var(--accent); }
+.article-card .excerpt { font-size: .94rem; color: var(--ink-soft); margin: .5rem 0 .7rem; line-height: 1.6; }
+
+/* ========== CATEGORY FILTER ========== */
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 24px 0 32px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 40px;
+}
+.cat-btn {
+  font-family: var(--sans);
+  font-size: .76rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all .2s;
+}
+.cat-btn:hover { border-color: var(--accent); color: var(--accent); }
+.cat-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* ========== SIDEBAR ========== */
+.sidebar { position: sticky; top: 100px; }
+
+.sidebar-block {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+.sidebar-block:last-child { border-bottom: none; }
+.sidebar-block h4 { margin-bottom: 16px; color: var(--ink); }
+
+.sidebar-block ul { list-style: none; }
+.sidebar-block li { margin-bottom: 10px; font-size: .92rem; }
+.sidebar-block li a { color: var(--ink-soft); border: none; }
+.sidebar-block li a:hover { color: var(--accent); }
+.sidebar-block .pop-meta { font-family: var(--sans); font-size: .72rem; color: var(--ink-faint); display: block; margin-top: 2px; }
+
+.editor-note {
+  background: var(--paper-warm);
+  padding: 24px;
+  border-radius: var(--radius);
+  font-size: .9rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.editor-note strong { color: var(--ink); font-weight: 600; }
+
+/* ========== ARTICLE PAGE SECTIONS ========== */
+.article-section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.article-section h2 { margin-bottom: 1.2rem; }
+.article-section h3 { margin: 2rem 0 .6rem; }
+.article-section p { max-width: var(--measure); }
+.article-section .figure {
+  margin: 2rem 0;
+}
+.article-section .figure img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+.article-section .figure figcaption {
+  font-family: var(--sans);
+  font-size: .78rem;
+  color: var(--ink-faint);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ========== FAQ ========== */
+.faq-list { list-style: none; }
+.faq-item {
+  border-bottom: 1px solid var(--rule);
+}
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 20px 0;
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.faq-q:hover { color: var(--accent); }
+.faq-q .arrow { font-size: 1.2rem; transition: transform .25s; color: var(--ink-faint); }
+.faq-item.open .faq-q .arrow { transform: rotate(45deg); }
+.faq-a {
+  display: none;
+  padding: 0 0 20px;
+  font-size: .96rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  max-width: var(--measure);
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ========== NEWSLETTER ========== */
+.newsletter {
+  background: var(--paper-warm);
+  padding: 56px 40px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin: 64px 0;
+}
+.newsletter h2 { font-size: 1.6rem; margin-bottom: .5rem; }
+.newsletter p { max-width: 480px; margin: 0 auto 24px; font-size: .96rem; }
+.newsletter form {
+  display: flex;
+  gap: 10px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.newsletter input[type="email"] {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-family: var(--serif);
+  font-size: .95rem;
+  background: var(--paper);
+  outline: none;
+}
+.newsletter input[type="email"]:focus { border-color: var(--accent); }
+.newsletter button {
+  padding: 12px 22px;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--sans);
+  font-size: .8rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.newsletter button:hover { background: var(--accent-deep); }
+
+/* ========== FOOTER ========== */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 56px 0 40px;
+  font-family: var(--sans);
+  font-size: .85rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-grid h4 { font-size: .74rem; margin-bottom: 14px; color: var(--ink); }
+.footer-grid ul { list-style: none; }
+.footer-grid li { margin-bottom: 8px; }
+.footer-grid a { color: var(--ink-faint); border: none; }
+.footer-grid a:hover { color: var(--accent); }
+.footer-brand p { font-size: .85rem; color: var(--ink-faint); line-height: 1.6; max-width: 300px; margin-top: 8px; }
+.footer-bottom {
+  border-top: 1px solid var(--rule);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: .78rem;
+  color: var(--ink-faint);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .main-grid { grid-template-columns: 1fr; gap: 40px; }
+  .sidebar { position: static; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  .masthead h1 { font-size: 2.2rem; }
+  .nav-links { display: none; }
+  .article-card { grid-template-columns: 1fr; gap: 16px; }
+  .article-card img { order: 0; aspect-ratio: 16/9; }
+  .article-card .card-body { order: 1; }
+  .featured-article h2 { font-size: 1.6rem; }
+  .newsletter form { flex-direction: column; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .masthead { padding: 40px 0 28px; }
+  .main-grid { padding: 32px 0 56px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">Crovana <span>Form House</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <input type="text" id="searchInput" placeholder="Search articles, topics, materials…" oninput="filterArticles()">
+    </div>
+  </div>
+</header>
+
+<!-- ========== MASTHEAD ========== -->
+<section class="masthead">
+  <div class="container">
+    <h1>The Form House Journal</h1>
+    <p class="subtitle">Independent writing on interior design, architecture & the making of modern homes</p>
+  </div>
+</section>
+
+<!-- ========== MAIN CONTENT ========== -->
+<div class="container">
+  <div class="main-grid">
+
+    <!-- ===== PRIMARY COLUMN ===== -->
+    <main>
+
+      <!-- Category Filter -->
+      <div class="category-filter" id="categoryFilter">
+        <button class="cat-btn active" data-cat="all" onclick="filterByCategory('all', this)">All</button>
+        <button class="cat-btn" data-cat="interior" onclick="filterByCategory('interior', this)">Interior Design</button>
+        <button class="cat-btn" data-cat="architecture" onclick="filterByCategory('architecture', this)">Architecture</button>
+        <button class="cat-btn" data-cat="home" onclick="filterByCategory('home', this)">Home Design</button>
+        <button class="cat-btn" data-cat="materials" onclick="filterByCategory('materials', this)">Materials</button>
+        <button class="cat-btn" data-cat="lighting" onclick="filterByCategory('lighting', this)">Lighting</button>
+        <button class="cat-btn" data-cat="planning" onclick="filterByCategory('planning', this)">Space Planning</button>
+        <button class="cat-btn" data-cat="modern" onclick="filterByCategory('modern', this)">Modern Homes</button>
+      </div>
+
+      <!-- FEATURED ARTICLE -->
+      <article class="featured-article" data-category="architecture">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" alt="A contemporary concrete residence with floor-to-ceiling glass walls opening onto a landscaped courtyard">
+        <span class="kicker">Featured · Residential Architecture</span>
+        <h2><a href="#">The Concrete House Between the Cliffs: A Case Study in Form and Restraint</a></h2>
+        <p class="meta">By <strong>Elena Marsh</strong> · 14 min read · March 2025</p>
+        <p class="excerpt">A modern concrete house with glass walls, nestled between two dark rocky cliffs, demonstrates how architecture can respond to extreme topography without theatrics. This long-form study examines the spatial logic, material choices, and structural decisions behind a residence that lets the landscape do the talking.</p>
+      </article>
+
+      <!-- ARTICLE LIST -->
+      <ul class="article-list" id="articleList">
+
+        <li class="article-card" data-category="interior">
+          <div class="card-body">
+            <span class="kicker">Interior Design</span>
+            <h3><a href="#">The Quiet Power of a Well-Proportioned Room: Why Scale Matters More Than Style</a></h3>
+            <p class="excerpt">Furniture trends come and go. Proportion is permanent. A practical guide to reading the dimensions of a room and furnishing it in a way that feels inevitable rather than arranged.</p>
+            <p class="meta">8 min read</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="A minimalist living room with correct furniture proportions and generous negative space">
+        </li>
+
+        <li class="article-card" data-category="architecture">
+          <div class="card-body">
+            <span class="kicker">Architecture</span>
+            <h3><a href="#">Facade Logic: How the Front of a House Tells You Everything About Its Interior</a></h3>
+            <p class="excerpt">The elevation is not decoration. It is a structural and environmental argument. Reading a facade correctly is the first skill of architectural literacy.</p>
+            <p class="meta">11 min read</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Geometric brick facade with deep reveals and a precise window grid">
+        </li>
+
+        <li class="article-card" data-category="lighting">
+          <div class="card-body">
+            <span class="kicker">Lighting</span>
+            <h3><a href="#">Layered Light: The Difference Between Illumination and Atmosphere</a></h3>
+            <p class="excerpt">A room lit by a single ceiling fixture is a room half-designed. This guide breaks down ambient, task, and accent lighting using real residential examples.</p>
+            <p class="meta">9 min read</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80" alt="Warm interior lighting layered across walls, furniture, and architectural features">
+        </li>
+
+        <li class="article-card" data-category="materials">
+          <div class="card-body">
+            <span class="kicker">Materials</span>
+            <h3><a href="#">Honest Materials: Why Good Interiors Age Well When They Don't Pretend</a></h3>
+            <p class="excerpt">Oak that looks like oak. Concrete that looks like concrete. A case for material honesty in residential interiors, and how to avoid finishes that fight their own nature.</p>
+            <p class="meta">7 min read</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Natural oak flooring and exposed concrete wall in a calm modern interior">
+        </li>
+
+        <li class="article-card" data-category="home planning">
+          <div class="card-body">
+            <span class="kicker">Space Planning</span>
+            <h3><a href="#">The Circulation Trap: How Bad Hallways Ruin Otherwise Good Homes</a></h3>
+            <p class="excerpt">You can have beautiful rooms and still live in a bad house. Circulation—the way you move between spaces—is the most underestimated element of residential design.</p>
+            <p class="meta">10 min read</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="A clean circulation corridor with natural light and minimal obstruction">
+        </li>
+
+        <li class="article-card" data-category="interior modern">
+          <div class="card-body">
+            <span class="kicker">Modern Interiors</span>
+            <h3><a href="#">What "Modern" Actually Means in Interior Design (And What It Doesn't)</a></h3>
+            <p class="excerpt">Modern is not a style. It is a set of principles about space, light, and function that emerged from a specific historical moment. Confusing the two leads to interiors that look dated fast.</p>
+            <p class="meta">8 min read</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80" alt="A modern interior defined by clarity of form, natural light, and restrained furnishing">
+        </li>
+
+        <li class="article-card" data-category="architecture home">
+          <div class="card-body">
+            <span class="kicker">Residential Architecture</span>
+            <h3><a href="#">The Courtyard House: An Ancient Idea That Solves Modern Problems</a></h3>
+            <p class="excerpt">Privacy, light, ventilation, and a sense of outdoor space—the courtyard delivers all four with a single move. Why this typology remains relevant in dense and suburban contexts alike.</p>
+            <p class="meta">12 min read</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80" alt="An inner courtyard of a house with planting and glazing on three sides">
+        </li>
+
+        <li class="article-card" data-category="interior home">
+          <div class="card-body">
+            <span class="kicker">Room Design</span>
+            <h3><a href="#">The Bedroom Is Not a Hotel Suite: Designing for Rest Instead of Impression</a></h3>
+            <p class="excerpt">Most bedroom design advice optimizes for photographs. This essay argues for a different brief: reduce stimulation, control light, and treat the room as infrastructure for sleep.</p>
+            <p class="meta">6 min read</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="A calm bedroom with soft textiles and carefully controlled natural light">
+        </li>
+
+      </ul>
+
+      <!-- ===== LONG-FORM SECTIONS ===== -->
+
+      <section class="article-section" id="architecture">
+        <h2>Reading a Modern Concrete House: Form, Structure, and the Cliff Site</h2>
+
+        <p class="lead">When a house is built into an extreme landscape—between rock faces, on a slope, against a cliff—the architecture has a choice: compete with the site or absorb it. The modern concrete house with glass walls that anchors this journal’s featured study takes the second path. Its lessons are transferable to far less dramatic sites.</p>
+
+        <h3>The Role of Concrete as a Finish, Not Just a Structure</h3>
+
+        <p>Concrete is often understood only as a structural material—something hidden behind plaster or cladding. In a house of this type, however, concrete is the interior and exterior surface. This decision has consequences. Concrete walls have thermal mass: they absorb heat during the day and release it slowly, which stabilizes interior temperatures in climates with significant diurnal swings. They also have weight, visually and acoustically. A concrete room sounds different from a drywall room. It reflects sound in a way that can feel severe, which is why such interiors almost always soften themselves with timber, wool, and upholstery.</p>
+
+        <h3>Glass as an Environmental Filter, Not Just a View</h3>
+
+        <p>Floor-to-ceiling glass in a house facing a cliff is not primarily about the view. It is about light. In a deep-plan concrete structure, glass is the only source of daylight for the living spaces. This means the glazing must be specified carefully: low-iron glass to avoid the green tint of standard float glass, solar control coatings on west and south exposures, and in many cases external shading in the form of overhangs or louvers. The difference between a glass wall that feels luxurious and one that feels like a greenhouse is almost entirely a matter of how the solar gain is managed.</p>
+
+        <figure class="figure">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1000&q=80" alt="A detail view of concrete formwork texture meeting a minimal window reveal">
+          <figcaption>Board-formed concrete retains the grain of the timber formwork used to cast it. The texture is a record of the construction process—an honest surface that reveals how the building was made.</figcaption>
+        </figure>
+
+        <h3>The Plan: How Rooms Organize Around a Central Idea</h3>
+
+        <p>The plan of a successful concrete house is usually simple. Complexity in the section—the way the building steps with the slope, or frames the cliff through a double-height volume—does the architectural work. The plan itself may be a straightforward sequence of rooms arranged along a single loaded corridor or around a central void. When the materials are heavy and the site is dramatic, the plan does not need to be clever. It needs to be calm.</p>
+
+        <p>This is the opposite of what many custom homes attempt. They pursue complexity in both plan and section, and the result is a house that feels busy rather than rich. A single strong spatial idea, executed with consistency, produces a more powerful experience than five mediocre ideas competing for attention.</p>
+      </section>
+
+      <section class="article-section" id="interiors">
+        <h2>The Interior Design Principles That Actually Survive Changing Taste</h2>
+
+        <p class="lead">Every five years, the furniture and colors that were "essential" become evidence of a past era. But certain principles remain stable across decades. These are the ones worth building a home around.</p>
+
+        <h3>1. Light Before Color</h3>
+        <p>No paint color can compensate for insufficient daylight. The single most impactful interior design decision is not the color of a wall but the orientation of a room, the size of its windows, and what hangs in front of them. Before choosing finishes, track the light: where does the morning sun land? Where does the late afternoon light turn harsh? Which rooms never receive direct light and need to be treated differently? Only after answering these questions does color become a meaningful choice.</p>
+
+        <h3>2. Negative Space Is Not Wasted Space</h3>
+        <p>A room filled with furniture is a room that has stopped being designed. The empty areas—the floor between the sofa and the wall, the surface of a table with a single object—do the same work that white space does in typography. They create hierarchy. They allow the things you do place to be seen. This is not minimalism as an aesthetic. It is clarity as a practice.</p>
+
+        <h3>3. Texture Over Pattern</h3>
+        <p>Patterns date quickly because they are tied to specific visual trends. Textures age more slowly because they engage touch and light rather than pure visual recognition. A room layered with linen, wool, raw timber, and matte ceramic will feel richer after ten years than a room defined by a graphic wallpaper that was in every design magazine the year it was installed.</p>
+
+        <h3>4. Circulation Defines Comfort</h3>
+        <p>A beautiful room that you have to walk through to reach the kitchen is a corridor with furniture. The most important spatial quality in a home is not the size of individual rooms but the ease of moving between them. This is why a well-planned 900-square-foot apartment can feel more comfortable than a poorly planned 2,000-square-foot house.</p>
+      </section>
+
+      <section class="article-section" id="materials">
+        <h2>A Practical Guide to Materials That Improve With Age</h2>
+
+        <p class="lead">Some finishes look best the day they are installed. Others look better after five years. For residential interiors, the second category is almost always the better investment.</p>
+
+        <h3>Oak and Other Hardwoods</h3>
+        <p>Solid oak, ash, and walnut develop a patina over time. Small scratches blend into the grain rather than standing out as defects. Oil-finished floors can be spot-repaired without sanding the entire surface. The key is to avoid aluminum-oxide factory finishes that create a plastic-like film; they are durable in the short term but impossible to maintain in the long term.</p>
+
+        <h3>Natural Stone</h3>
+        <p>Honed limestone and marble that are allowed to patina—rather than sealed into a state of artificial perfection—are among the most forgiving surfaces in a home. A water mark on a sealed marble counter is a crisis. A water mark on an unsealed or lightly sealed honed stone is simply part of its history.</p>
+
+        <h3>Lime Plaster and Clay Paint</h3>
+        <p>Mineral finishes like lime plaster and clay paint are breathable, repairable, and visually soft. They reflect light differently from acrylic paint, producing a depth that no flat latex can replicate. They also develop character—small cracks and variations in tone that read as evidence of a real material rather than a manufactured surface.</p>
+
+        <figure class="figure">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1000&q=80" alt="A honed stone kitchen counter with visible natural variation and a matte finish">
+          <figcaption>Honed natural stone: a surface that accepts the marks of daily life rather than fighting them. The absence of a high-gloss sealant is a design decision, not a lack of maintenance.</figcaption>
+        </figure>
+
+        <h3>What to Avoid</h3>
+        <p>Materials that imitate other materials tend to age poorly. Vinyl that mimics wood. Ceramic tile printed to look like marble. Laminate with a photorealistic stone pattern. These surfaces are at their best on installation day and decline from there. An honest, less expensive material—real cork, real linoleum, real pine—will often outlast and out-charm a synthetic imitation of something more "premium."</p>
+      </section>
+
+      <section class="article-section" id="guides">
+        <h2>A Room-by-Room Guide to Making Better Decisions</h2>
+
+        <h3>The Living Room</h3>
+        <p>Start with a rug. The rug defines the conversation area more effectively than any arrangement of furniture. A rug that is too small makes even a large room feel cramped; a rug that is large enough to fit at least the front legs of all seating creates a room within a room. From there, arrange seating around a fixed point—a fireplace, a window, a view—rather than floating it in the center of the floor. The television, if there is one, should be accommodated rather than centered. A room organized around a screen is a room that has given up its potential.</p>
+
+        <h3>The Kitchen</h3>
+        <p>The triangle—sink, stove, refrigerator—remains the best organizing principle for a kitchen. Everything else follows from it. Counter depth, aisle width (minimum 42 inches between parallel counters, 48 inches preferred), and landing space next to the refrigerator and stove matter more than cabinet door style or backsplash material. A kitchen with excellent layout and modest finishes will outlive a kitchen with spectacular finishes and a bad layout.</p>
+
+        <h3>The Bathroom</h3>
+        <p>Ventilation and light come first. A bathroom without a window needs mechanical ventilation that actually works, not just a fan that makes noise. Then consider the shower: a walk-in shower with a linear drain eliminates the curb, which makes the room feel larger and easier to clean. Tile selection should prioritize slip resistance over pattern. The floor tile you choose because it looks good in a showroom may be the same tile that sends someone to the hospital after a shower.</p>
+
+        <h3>The Bedroom</h3>
+        <p>Light control is the primary design problem. Blackout capability is not a luxury; it is a functional requirement. Beyond that, reduce the number of surfaces that collect objects. Every horizontal surface in a bedroom—nightstands, dressers, window sills—will accumulate clutter. Fewer surfaces means less clutter. This is not about discipline; it is about design.</p>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section class="article-section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul class="faq-list">
+          <li class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">What is the difference between interior design and interior architecture?<span class="arrow">+</span></button>
+            <div class="faq-a">Interior design typically concerns finishes, furniture, and the visual arrangement of existing spaces. Interior architecture involves changing the spatial structure itself—removing or adding walls, altering ceiling heights, reconfiguring circulation. In residential projects, the two overlap considerably, which is why the best results often come from a single designer or a tightly coordinated team.</div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">How much does a residential renovation cost per square foot?<span class="arrow">+</span></button>
+            <div class="faq-a">Costs vary dramatically by region, scope, and finish level. As a rough planning figure in many Western markets, a cosmetic renovation (paint, floors, fixtures) might fall in the range of $150–$300 per square foot, while a structural renovation involving new kitchens, bathrooms, and circulation changes can exceed $500 per square foot. These are planning ranges, not quotes. The only reliable number comes from a contractor who has visited the actual property.</div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">Is an architect necessary for a house renovation?<span class="arrow">+</span></button>
+            <div class="faq-a">If the work involves structure, changes to the building envelope, or modifications that affect how the house performs thermally or acoustically, an architect or structural engineer is often required by regulation and almost always advisable in practice. For purely cosmetic updates—paint, furniture, removable fixtures—an interior designer or a knowledgeable homeowner can manage the work without architectural involvement.</div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">What makes a room feel comfortable rather than just attractive?<span class="arrow">+</span></button>
+            <div class="faq-a">Comfort comes from factors that photographs do not capture: thermal quality, acoustic softness, the absence of glare, and the ease of moving through the space. A room that looks beautiful in a magazine can feel cold, echoing, and awkward to use. The most comfortable rooms tend to have layered lighting, soft floor coverings, at least one very comfortable seat, and enough empty space that movement does not require navigating around furniture.</div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">How do I choose materials that will not look dated in five years?<span class="arrow">+</span></button>
+            <div class="faq-a">Choose materials that are what they appear to be. Real wood, real stone, real wool, real linen, real concrete. Avoid materials that imitate other materials. Avoid surfaces with strong graphic patterns that are tied to a specific visual trend. The safest long-term choices are simple, honest, and slightly imperfect—they have the capacity to develop character rather than merely degrade.</div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">What is the single most impactful design change in a typical home?<span class="arrow">+</span></button>
+            <div class="faq-a">Improving daylight. This can mean removing a wall, enlarging a window, adding a skylight, or simply clearing obstructions from existing windows. No other single intervention affects how a room feels, how it is used, and how good it looks in both sunlight and artificial light as reliably as increasing the amount and quality of natural light.</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <div class="newsletter">
+        <h2>Stay with the Journal</h2>
+        <p>One email per week. Long-form articles, practical guides, and new case studies—no noise, no sales pitches.</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you. You are subscribed to the Crovana Form House journal.');">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+
+      <div class="sidebar-block">
+        <h4>Popular This Month</h4>
+        <ul>
+          <li><a href="#">The Circulation Trap: How Bad Hallways Ruin Good Homes</a><span class="pop-meta">10 min read</span></li>
+          <li><a href="#">Honest Materials: Why Good Interiors Age Well</a><span class="pop-meta">7 min read</span></li>
+          <li><a href="#">What “Modern” Actually Means in Interior Design</a><span class="pop-meta">8 min read</span></li>
+          <li><a href="#">The Courtyard House: An Ancient Idea for Modern Problems</a><span class="pop-meta">12 min read</span></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Residential Architecture</a></li>
+          <li><a href="#">Materials & Finishes</a></li>
+          <li><a href="#">Lighting Design</a></li>
+          <li><a href="#">Space Planning</a></li>
+          <li><a href="#">Modern Homes</a></li>
+          <li><a href="#">Kitchens & Bathrooms</a></li>
+          <li><a href="#">Sustainable Design</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h4>About the Editor</h4>
+        <div class="editor-note">
+          <strong>Elena Marsh</strong> is a writer and editor covering residential architecture and interior design. She has worked on editorial teams at design publications in London and Copenhagen, and writes about the practical decisions that shape how homes are lived in—not just how they photograph.
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <h4>Publication</h4>
+        <ul>
+          <li><a href="#about">About Crovana Form House</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Use</a></li>
+          <li><a href="#cookies">Cookie Notice</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div><!-- /main-grid -->
+</div><!-- /container -->
+
+<!-- ========== ABOUT / PRIVACY / TERMS / COOKIES ========== -->
+<div class="container-narrow" style="padding-bottom: 80px;">
+
+  <section id="about" class="article-section">
+    <h2>About Crovana Form House</h2>
+    <p>Crovana Form House is an independent editorial journal about interior design and architecture. It is written for people who want to understand not just what looks good, but why certain spaces work—and why others, despite appearances, do not.</p>
+    <p>The journal publishes long-form articles, practical guides, and case studies. Its editorial position is simple: form follows function, materials should be honest, light matters more than color, and the best interiors are the ones that are easiest to live in.</p>
+    <p>Crovana Form House is not affiliated with any architectural practice, manufacturer, or retailer. It accepts no sponsored content.</p>
+  </section>
+
+  <section id="contact" class="article-section">
+    <h2>Contact</h2>
+    <p>Editorial enquiries, corrections, and story pitches: <a href="mailto:editor@crovanaformhouse.com">editor@crovanaformhouse.com</a></p>
+    <p>We read every message but cannot guarantee a reply to unsolicited pitches. If your pitch is a good fit for the journal’s editorial focus, you will hear back within two weeks.</p>
+  </section>
+
+  <section id="privacy" class="article-section">
+    <h2>Privacy Policy</h2>
+    <p>Crovana Form House does not collect personal information beyond what you voluntarily provide through the newsletter signup or email correspondence. Newsletter email addresses are used only to send the journal and are never shared with third parties.</p>
+    <p>Server logs may record standard technical information—IP address, browser type, pages visited—for the purpose of understanding readership and improving the site. This information is not used to identify individual readers.</p>
+  </section>
+
+  <section id="terms" class="article-section">
+    <h2>Terms of Use</h2>
+    <p>All text and original imagery published on Crovana Form House is protected by copyright. You may quote short passages with attribution and a link to the original article. Reproduction of full articles is not permitted without written consent.</p>
+    <p>The information on this site is provided for general informational purposes. It is not a substitute for professional architectural, engineering, or construction advice. Always consult qualified professionals before making structural or regulatory decisions about a building project.</p>
+  </section>
+
+  <section id="cookies" class="article-section" style="border-bottom: none;">
+    <h2>Cookie Notice</h2>
+    <p>Crovana Form House uses only essential cookies required for the site to function. No advertising cookies, no cross-site tracking cookies, and no third-party analytics that build reader profiles. If this changes in the future, this notice will be updated.</p>
+  </section>
+
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Crovana Form House</h4>
+        <p>An independent journal of interior design and architecture. Written for readers who want to understand the principles behind good buildings and better rooms.</p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#interiors">Interiors</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#materials">Materials</a></li>
+          <li><a href="#guides">Guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Journal</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a href="#cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Crovana Form House. All rights reserved.</span>
+      <span>Editorial journal · No sponsored content</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+// ===== SEARCH TOGGLE =====
+function toggleSearch() {
+  const bar = document.getElementById('searchBar');
+  bar.classList.toggle('open');
+  if (bar.classList.contains('open')) {
+    document.getElementById('searchInput').focus();
+  }
+}
+
+// ===== FILTER BY SEARCH TEXT =====
+function filterArticles() {
+  const query = document.getElementById('searchInput').value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.article-card');
+
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(query) ? '' : 'none';
+  });
+
+  // Also hide featured if query is active and doesn't match
+  const featured = document.querySelector('.featured-article');
+  if (featured) {
+    if (query.length > 0) {
+      const text = featured.innerText.toLowerCase();
+      featured.style.display = text.includes(query) ? '' : 'none';
+    } else {
+      featured.style.display = '';
+    }
+  }
+}
+
+// ===== FILTER BY CATEGORY =====
+function filterByCategory(cat, btn) {
+  // Update active button
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const cards = document.querySelectorAll('.article-card');
+  cards.forEach(card => {
+    const cats = (card.dataset.category || '').split(' ');
+    card.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
+  });
+
+  // Featured article: show only for "all" or matching categories
+  const featured = document.querySelector('.featured-article');
+  if (featured) {
+    const fCat = featured.dataset.category || '';
+    featured.style.display = (cat === 'all' || fCat === cat) ? '' : 'none';
+  }
+}
+
+// ===== FAQ TOGGLE =====
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+  // Open clicked (if it wasn't already open)
+  if (!isOpen) {
+    item.classList.add('open');
+  }
+}
+</script>
+
+</body>
+</html>
